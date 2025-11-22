@@ -17,7 +17,7 @@ export class App {
   ngOnInit(){
     this.productService.getProductList().subscribe((data:any) =>{
       console.log(data);
-      this.productList=data;
+      this.productList=data.products;
     });
   }
 }
