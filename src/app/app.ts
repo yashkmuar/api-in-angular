@@ -14,6 +14,6 @@ export class App {
 
   }
   ngOnInit(){
-    
+    this.productService.getProductList().subscribe();
   }
 }
