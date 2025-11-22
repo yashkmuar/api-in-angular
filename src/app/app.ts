@@ -9,6 +9,7 @@ import { Products } from './services/products';
   styleUrl: './app.css'
 })
 export class App {
+  productList:any;
   protected readonly title = signal('api-angular');
   constructor(private productService:Products){
 
@@ -16,6 +17,7 @@ export class App {
   ngOnInit(){
     this.productService.getProductList().subscribe((data:any) =>{
       console.log(data);
+      this.productList=data;
     });
   }
 }
